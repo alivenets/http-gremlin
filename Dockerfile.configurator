@@ -1,0 +1,7 @@
+FROM alpine:latest 
+
+RUN apk update 
+RUN apk upgrade 
+RUN apk add curl bash
+COPY config.sh ./
+CMD /bin/sh ./config.sh
